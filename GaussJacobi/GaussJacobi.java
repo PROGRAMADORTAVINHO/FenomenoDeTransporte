@@ -52,5 +52,8 @@ public class GaussJacobi {
         for (int nc=0; nc < this.C.length; nc++){
             temp = temp - this.C[linha][nc] * this.Xo[nc]; 
         }
+        temp = temp / this.D[linha];
+
+        return temp;
     }
 }
