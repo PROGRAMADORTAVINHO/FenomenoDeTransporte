@@ -47,7 +47,10 @@ public class GaussJacobi {
         return destino;
     }
 
-    private double calculaLinha(int i){
-        
+    private double calculaLinha(int linha){
+        double temp = this.C[linha][this.C[0].length-1];
+        for (int nc=0; nc < this.C.length; nc++){
+            temp = temp - this.C[linha][nc] * this.Xo[nc]; 
+        }
     }
 }
